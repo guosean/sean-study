@@ -10,9 +10,7 @@ import com.lowagie.text.pdf.PdfReader;
 import com.lowagie.text.pdf.PdfStamper;
 
 public class PdfTest {
-     public void test(){
-    	 System.out.println("test");
-     }
+  
 	public static void main(String[] args) throws IOException, DocumentException {
 		 PdfReader pdfReader = new PdfReader("D:\\test\\Hadoop权威指南.pdf"); 
 		   System.out.println( pdfReader.isTampered()); 
