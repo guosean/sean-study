@@ -1,0 +1,6 @@
+Compiled from "TestPro.java"
+public class com.sean.jdk.extend.TestPro extends java.lang.Object{
+    public com.sean.jdk.extend.TestPro();
+    public static void main(java.lang.String[]);
+}
+

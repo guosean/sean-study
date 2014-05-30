@@ -1,0 +1,66 @@
+Compiled from "TestPro.java"
+public class com.sean.jdk.extend.TestPro extends java.lang.Object
+  SourceFile: "TestPro.java"
+  minor version: 0
+  major version: 50
+  Constant pool:
+const #1 = class	#2;	//  com/sean/jdk/extend/TestPro
+const #2 = Asciz	com/sean/jdk/extend/TestPro;
+const #3 = class	#4;	//  java/lang/Object
+const #4 = Asciz	java/lang/Object;
+const #5 = Asciz	<init>;
+const #6 = Asciz	()V;
+const #7 = Asciz	Code;
+const #8 = Method	#3.#9;	//  java/lang/Object."<init>":()V
+const #9 = NameAndType	#5:#6;//  "<init>":()V
+const #10 = Asciz	LineNumberTable;
+const #11 = Asciz	LocalVariableTable;
+const #12 = Asciz	this;
+const #13 = Asciz	Lcom/sean/jdk/extend/TestPro;;
+const #14 = Asciz	main;
+const #15 = Asciz	([Ljava/lang/String;)V;
+const #16 = class	#17;	//  com/sean/jdk/extend/Parent
+const #17 = Asciz	com/sean/jdk/extend/Parent;
+const #18 = Method	#16.#9;	//  com/sean/jdk/extend/Parent."<init>":()V
+const #19 = Asciz	args;
+const #20 = Asciz	[Ljava/lang/String;;
+const #21 = Asciz	p;
+const #22 = Asciz	Lcom/sean/jdk/extend/Parent;;
+const #23 = Asciz	SourceFile;
+const #24 = Asciz	TestPro.java;
+
+{
+public com.sean.jdk.extend.TestPro();
+  Code:
+   Stack=1, Locals=1, Args_size=1
+   0:	aload_0
+   1:	invokespecial	#8; //Method java/lang/Object."<init>":()V
+   4:	return
+  LineNumberTable: 
+   line 17: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lcom/sean/jdk/extend/TestPro;
+
+
+public static void main(java.lang.String[]);
+  Code:
+   Stack=2, Locals=2, Args_size=1
+   0:	new	#16; //class com/sean/jdk/extend/Parent
+   3:	dup
+   4:	invokespecial	#18; //Method com/sean/jdk/extend/Parent."<init>":()V
+   7:	astore_1
+   8:	return
+  LineNumberTable: 
+   line 20: 0
+   line 22: 8
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      9      0    args       [Ljava/lang/String;
+   8      1      1    p       Lcom/sean/jdk/extend/Parent;
+
+
+}
+
