@@ -9,13 +9,16 @@ public class BeanUtils {
 	 */
 	private static ApplicationContext springCtx = null;
 	
+	private static String SPRING_FILE = "config/Context-configure.xml";
+	
+	private static String JOB_FILE = "config/Quartzjob-configure.xml";
 	/**
 	 * 初始化Spring配置
 	 */
 	static {
 		//默认只加载memcached
 		springCtx = new ClassPathXmlApplicationContext(
-				/*CookieGenConstants.SPRING_FILE*/);
+				SPRING_FILE);
 	}
 
 	/**
@@ -37,6 +40,6 @@ public class BeanUtils {
 	 */
 	public static void initJob() {
 		springCtx = new ClassPathXmlApplicationContext(
-				new String[]{/*CookieGenConstants.SPRING_FILE,CookieGenConstants.JOB_FILE*/});
+				new String[]{SPRING_FILE,JOB_FILE});
 	}
 }

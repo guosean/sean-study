@@ -16,16 +16,30 @@
 			<ref bean="poolConfig" />
 		</constructor-arg>
 		<!-- host -->
-		<constructor-arg index="1" value="10.1.251.87" />
+		<constructor-arg index="1" value="192.168.0.106" />
 		<!-- port -->
 		<constructor-arg index="2" value="6379" type="int" />
 	</bean>
+	<bean id="slave1" class="redis.clients.jedis.JedisShardInfo">
+		<constructor-arg index="0" value="192.168.0.106" />
+		<!-- port -->
+		<constructor-arg index="1" value="6378" type="int" />
+	</bean>
+	<bean id="shardedPool" class="redis.clients.jedis.ShardedJedisPool">
+		<constructor-arg index="0">
+			<ref bean="poolConfig" />
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref local="slave1" />
+			</list>
+		</constructor-arg>
+	</bean>
 	<!-- redis服务 -->
-	<bean id="redisService"
-		class="com.sean.service.imp.RedisService"
+	<bean id="redisService" class="com.sean.service.imp.RedisService"
 		lazy-init="true">
 		<property name="jedisPool">
-			<ref local="psma_redisPool" />
+			<ref local="redisPool" />
 		</property>
 	</bean>
 
