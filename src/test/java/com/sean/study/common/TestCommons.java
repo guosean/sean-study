@@ -11,6 +11,14 @@ public class TestCommons {
 	private static final String LINE_SEP = "\n";
 	private static final Object TAB = "\t";
 	@Test
+	public void testIntTochar(){
+		int i = 1234560;
+		char[] chrs = String.valueOf(i).toCharArray();
+		for (int j = 0; j < chrs.length; j++) {
+			System.out.println((int)chrs[j]);
+		}
+	}
+	@Test
 	public void testFetchInfo(){
 		String str="人民网/nz 1月1日/t 讯/ng 据/p 《/w [纽约/nsf 时报/n]/nz 》/w 报道/v";
 		String delim=" ";

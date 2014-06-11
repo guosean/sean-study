@@ -15,6 +15,8 @@ public class Branch implements Trie {
 	 * 子分支
 	 */
 	private Branch[] subBranches;
+	
+	private static int len = 55;
 	/**
 	 * 
 	 * @param chr
@@ -29,10 +31,14 @@ public class Branch implements Trie {
 	@Override
 	public void insertBranch(Branch branch) {
 		Preconditions.checkNotNull(branch);
-		if(subBranches==null){
-			subBranches = new Branch[0];
+		if(null != branch){
+			if(subBranches==null){
+				subBranches = new Branch[len];
+			}
+			if(branch.getChar() < len && null == subBranches[branch.getChar()]){
+				subBranches[branch.getChar()] = branch;
+			}
 		}
-		
 	}
 
 	/* (non-Javadoc)
@@ -40,7 +46,14 @@ public class Branch implements Trie {
 	 */
 	@Override
 	public Trie getBranch(char chr) {
-		// TODO Auto-generated method stub
+		if(null != subBranches){
+			if(chr < len){
+				Branch rt = subBranches[chr];
+				if(null != rt){
+					return rt;
+				}
+			}
+		}
 		return null;
 	}
 

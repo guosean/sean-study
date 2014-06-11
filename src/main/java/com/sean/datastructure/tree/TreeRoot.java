@@ -17,7 +17,12 @@ public class TreeRoot implements Trie {
 	 */
 	@Override
 	public void insertBranch(Branch branch) {
-		// TODO Auto-generated method stub
+		if(null != branch){
+			char chr = branch.getChar();
+			if(chr < roots.length && null == roots[chr]){
+				roots[chr] = branch;
+			}
+		}
 
 	}
 
@@ -26,7 +31,14 @@ public class TreeRoot implements Trie {
 	 */
 	@Override
 	public Trie getBranch(char chr) {
-		// TODO Auto-generated method stub
+		if(null != roots){
+			if(chr < roots.length){
+				Branch rt = roots[chr];
+				if(null != rt){
+					return rt;
+				}
+			}
+		}
 		return null;
 	}
 
@@ -35,7 +47,6 @@ public class TreeRoot implements Trie {
 	 */
 	@Override
 	public char getChar() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
