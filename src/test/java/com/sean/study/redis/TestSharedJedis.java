@@ -8,6 +8,7 @@ import redis.clients.jedis.ShardedJedis;
 import redis.clients.jedis.ShardedJedisPool;
 
 public class TestSharedJedis {
+	
 	@Test
 	public void testSlave(){
 		ShardedJedisPool sp = (ShardedJedisPool) BeanUtils.getBean("shardedPool");

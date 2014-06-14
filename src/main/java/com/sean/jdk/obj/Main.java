@@ -1,8 +1,10 @@
 package com.sean.jdk.obj;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
+
+import lombok.Data;
+import lombok.extern.log4j.Log4j;
 
 public class Main {
 	
@@ -24,7 +26,7 @@ public class Main {
     	   System.out.println(it.next().getName());
        }*/
        System.out.println("=======================");
-       Iterable<Obj> it = new Iterable<Obj>() {
+     /*  Iterable<Obj> it = new Iterable<Obj>() {
 		
 		public Iterator<Obj> iterator() {
 			// TODO Auto-generated method stub
@@ -38,29 +40,19 @@ public class Main {
        for (Obj obj : it) {
    		System.out.println(obj.getName());
    	}
+	*/
 	}
-
 }
-
+@Data
 class Obj{
 	
 	String name;
 	
-  
 	Person p;
 	
 	public Obj(String name) {
 		this.p= new Person(name);
 	}
-	
-	public String getName() {
-		return p.getName();
-	}
-
-	public void setName(String name) {
-		 p.setName(name);
-	}
-
 }
 
 class Person{
