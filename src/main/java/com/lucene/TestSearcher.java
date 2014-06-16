@@ -9,6 +9,7 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.queryParser.MultiFieldQueryParser;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.Explanation;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
@@ -55,18 +56,17 @@ public class TestSearcher {
 	@Test
 	public void testSearchByTerm() throws CorruptIndexException, IOException,
 			ParseException {
-		String q = "秦都区";
+		String q = "短信息";
 		Directory dir = FSDirectory.open(new File(TestIndexer.indexPath));
 		// 打开索引
 		IndexSearcher is = new IndexSearcher(dir);
-		TermQuery tq = new TermQuery(new Term("district", q));
+		TermQuery tq = new TermQuery(new Term("rule1", q));
 		TopDocs tps = is.search(tq, 10);
-		// Analyzer az = new StandardAnalyzer(Version.LUCENE_30);
 		ScoreDoc[] sds = tps.scoreDocs;
 		for (ScoreDoc scoreDoc : sds) {
 			Document doc = is.doc(scoreDoc.doc);
 			// 返回匹配文件名
-			System.out.println(doc.get("address") + " ----- " + doc.get("name"));
+			System.out.println(doc.get("product") + " ----- " + doc.get("rule0"));
 		}
 		is.close();
 	}
@@ -107,14 +107,18 @@ public class TestSearcher {
 	public void testMultiQueryParser() throws ParseException, CorruptIndexException, IOException{
 		String[] fields = {"product","rule0","rule1"};
 		QueryParser qp = new MultiFieldQueryParser(Version.LUCENE_30,fields , new IKAnalyzer()/*new StandardAnalyzer(Version.LUCENE_30)*/);
-		Query query = qp.parse("梦网短~0.5");
+		Query query = qp.parse("\"国际短信\"~0.1");
+		System.out.println("Query:"+query.toString());
 		TopDocs tps = searcher.search(query, 10);
 		ScoreDoc[] sds = tps.scoreDocs;
+	   Explanation exp = null;
 		for (ScoreDoc scoreDoc : sds) {
 			Document doc = searcher.doc(scoreDoc.doc);
+			exp = searcher.explain(query, scoreDoc.doc);
+			System.out.println(exp);
 			System.out.print(scoreDoc.score);
 			// 返回匹配文件名
-			System.out.println(doc.get("product") + " ----- " + doc.get("rule0")+doc.get("rule1"));
+			System.out.println(doc.get("product") + " ----- " + doc.get("rule0")+"---"+doc.get("rule1"));
 		}
 		searcher.close();
 	}
