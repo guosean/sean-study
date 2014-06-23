@@ -133,7 +133,7 @@ public class TestSearcher {
 	public void testMultiQueryParser() throws ParseException, CorruptIndexException, IOException{
 		String[] fields = {"product","rule0","rule1","rule2","rule3","rule4","rule5"};
 		QueryParser qp = new MultiFieldQueryParser(Version.LUCENE_30,fields , new IKAnalyzer()/*new StandardAnalyzer(Version.LUCENE_30)*/);
-		Query query = qp.parse("我 投诉 问题 ﻿中国移动 存十送四活动");
+		Query query = qp.parse("+专享 +188");
 		long start = System.nanoTime();
 		TopDocs tps = searcher.search(query, 10);
 		System.out.println(" time userd:"+(System.nanoTime()-start));

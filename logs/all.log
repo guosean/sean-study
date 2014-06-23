@@ -1998,3 +1998,7 @@
 [2014-06-11 16:43:09,054][ INFO][main][com.sean.datastructure.tree.TestTrie:28] - 1:true
 [2014-06-11 16:43:09,054][ INFO][main][com.sean.datastructure.tree.TestTrie:28] - 35:true
 [2014-06-11 16:43:09,054][ INFO][main][com.sean.datastructure.tree.TestTrie:28] - 58:true
+[2014-06-23 17:59:11,610][ INFO][main][org.springframework.context.support.ClassPathXmlApplicationContext:510] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@c2ff5: startup date [Mon Jun 23 17:59:11 CST 2014]; root of context hierarchy
+[2014-06-23 17:59:11,676][ INFO][main][org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315] - Loading XML bean definitions from class path resource [config/Context-configure.xml]
+[2014-06-23 17:59:11,741][ INFO][main][org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315] - Loading XML bean definitions from class path resource [config/Redis-configure.xml]
+[2014-06-23 17:59:11,808][ INFO][main][org.springframework.beans.factory.support.DefaultListableBeanFactory:577] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1d86fd3: defining beans [poolConfig,redisPool,slave1,shardedPool,redisService]; root of factory hierarchy
