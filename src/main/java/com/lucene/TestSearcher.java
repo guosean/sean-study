@@ -1,18 +1,25 @@
 package com.lucene;
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.CorruptIndexException;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.index.TermFreqVector;
 import org.apache.lucene.queryParser.MultiFieldQueryParser;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.Explanation;
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.Sort;
+import org.apache.lucene.search.SortField;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.WildcardQuery;
@@ -50,26 +57,49 @@ public class TestSearcher {
 	public void setUp() throws CorruptIndexException, IOException{
 		 dir = FSDirectory.open(new File(TestIndexer.indexPath));
 		// 打开索引
-		 searcher = new IndexSearcher(dir);
+		 IndexReader ir = IndexReader.open(dir);
+		 ExecutorService es = Executors.newFixedThreadPool(10);
+		 searcher = new IndexSearcher(ir,es);
+		 
 	}
 	
 	@Test
 	public void testSearchByTerm() throws CorruptIndexException, IOException,
 			ParseException {
-		String q = "短信息";
+		String q = "短信";
 		Directory dir = FSDirectory.open(new File(TestIndexer.indexPath));
 		// 打开索引
 		IndexSearcher is = new IndexSearcher(dir);
+		IndexReader reader = is.getIndexReader();
 		TermQuery tq = new TermQuery(new Term("rule1", q));
-		TopDocs tps = is.search(tq, 10);
+		TopDocs tps = is.search(tq, 10,new Sort(new SortField("product", SortField.STRING)));
 		ScoreDoc[] sds = tps.scoreDocs;
 		for (ScoreDoc scoreDoc : sds) {
 			Document doc = is.doc(scoreDoc.doc);
+			TermFreqVector vec =  reader.getTermFreqVector(scoreDoc.doc, "product");
+			System.out.println("vector:"+vec);
 			// 返回匹配文件名
 			System.out.println(doc.get("product") + " ----- " + doc.get("rule0"));
 		}
 		is.close();
 	}
+	@Test
+	public void testPhraseQuery() throws IOException{
+		PhraseQuery pq = new PhraseQuery();
+		pq.add(new Term("product", "一起"));
+		pq.add(new Term("product", "回家"));
+		pq.setSlop(10);
+		TopDocs tps = searcher.search(pq, 10);
+		// Analyzer az = new StandardAnalyzer(Version.LUCENE_30);
+		ScoreDoc[] sds = tps.scoreDocs;
+		for (ScoreDoc scoreDoc : sds) {
+			Document doc = searcher.doc(scoreDoc.doc);
+			// 返回匹配文件名
+			System.out.println(doc.get("product") + " ----- " + doc.get("rule"));
+		}
+		searcher.close();
+	}
+	
 	@Test
 	public void testByWildcardQuery() throws IOException{
 		String q = "梦网*";
@@ -105,11 +135,12 @@ public class TestSearcher {
 	
 	@Test
 	public void testMultiQueryParser() throws ParseException, CorruptIndexException, IOException{
-		String[] fields = {"product","rule0","rule1"};
+		String[] fields = {"product","rule0","rule1","rule2","rule3","rule4","rule5"};
 		QueryParser qp = new MultiFieldQueryParser(Version.LUCENE_30,fields , new IKAnalyzer()/*new StandardAnalyzer(Version.LUCENE_30)*/);
-		Query query = qp.parse("\"国际短信\"~0.1");
-		System.out.println("Query:"+query.toString());
+		Query query = qp.parse("我 投诉 问题 ﻿中国移动 存十送四活动");
+		long start = System.nanoTime();
 		TopDocs tps = searcher.search(query, 10);
+		System.out.println(" time userd:"+(System.nanoTime()-start));
 		ScoreDoc[] sds = tps.scoreDocs;
 	   Explanation exp = null;
 		for (ScoreDoc scoreDoc : sds) {

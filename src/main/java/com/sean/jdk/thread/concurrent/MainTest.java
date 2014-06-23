@@ -44,6 +44,12 @@ public class MainTest {
 	  	exec.shutdown();
 	  	System.out.println(count);
 	}
+	
+	private static void print(String str){
+		synchronized (str) {
+			System.out.println(str);
+		}
+	}
    @Test
 	public void testSum(){
 		SumObj obj = new SumObj();

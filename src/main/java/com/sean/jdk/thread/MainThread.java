@@ -5,11 +5,14 @@ import java.util.Date;
 public class MainThread {
 	
 	public static void main(String[] args) {
-		Thread p1 = new Thread(new PrinterThread(1, "PrinterThread1"));
+/*		Thread p1 = new Thread(new PrinterThread(1, "PrinterThread1"));
 	    p1.start();
 		Thread p2 = new Thread(new PrinterThread(3, "PrinterThread2"));
-		p2.start();
-		
+		p2.start();*/
+		for(int i=0 ; i<1000000000; i++){
+			Thread p = new Thread();
+			p.start();
+		}
 	}
 
 }

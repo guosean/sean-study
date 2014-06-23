@@ -11,6 +11,10 @@ public class TestCommons {
 	private static final String LINE_SEP = "\n";
 	private static final Object TAB = "\t";
 	@Test
+	public void test(){
+            System.out.println(24%7);
+	}
+	@Test
 	public void testIntTochar(){
 		int i = 1234560;
 		char[] chrs = String.valueOf(i).toCharArray();
