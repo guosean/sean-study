@@ -1,5 +1,23 @@
 Manifest-Version: 1.0
 Built-By: sean
 Build-Jdk: 1.6.0_24
+Class-Path: guava-15.0.jar solr-solrj-3.6.2.jar commons-httpclient-3.1
+ .jar commons-io-2.1.jar wstx-asl-3.2.7.jar jcl-over-slf4j-1.6.1.jar c
+ ommons-lang3-3.1.jar commons-codec-1.4.jar commons-collections-3.2.1.
+ jar log4j-1.2.17.jar lombok-1.14.0.jar slf4j-api-1.6.6.jar slf4j-log4
+ j12-1.6.6.jar zip4j-1.3.1.jar itext-1.3.jar ant-1.9.1.jar ant-launche
+ r-1.9.1.jar barcode4j-2.1.jar avalon-framework-impl-4.2.0.jar commons
+ -cli-1.0.jar commons-lang-1.0.jar httpclient-4.1.3.jar httpcore-4.1.4
+ .jar commons-logging-1.1.1.jar httpmime-4.1.3.jar jedis-2.5.1.jar com
+ mons-pool2-2.0.jar spring-beans-3.2.0.RELEASE.jar spring-core-3.2.0.R
+ ELEASE.jar spring-context-support-3.2.0.RELEASE.jar spring-context-3.
+ 2.0.RELEASE.jar spring-aop-3.2.0.RELEASE.jar spring-webmvc-3.2.0.RELE
+ ASE.jar spring-web-3.2.0.RELEASE.jar spring-expression-3.2.0.RELEASE.
+ jar spring-tx-3.2.0.RELEASE.jar aopalliance-1.0.jar xmemcached-2.0.0.
+ jar pinyin4j-2.5.0.jar lucene-core-3.4.0.jar lucene-highlighter-3.6.0
+ .jar lucene-memory-3.6.0.jar lucene-queries-3.6.0.jar jakarta-regexp-
+ 1.4.jar IKAnalyzer-2012_u5.jar
+Main-Class: com.Main
+Bundle-CN-Name: dd
 Created-By: Maven Integration for Eclipse
 
