@@ -16,7 +16,7 @@ public class TestExtend {
 		Parent pt = new Child();
 		// Child cd = new Child();
 		System.out.println(pt.getName() + pt.getAge() + " " + pt.age);
-		pt.imStatic();
+//		pt.imStatic();
 		System.out.println(pt.getClass().toString());
 		pt.imGeneral();
 		// System.out.println(cd.getName()+cd.getAge()+" "+cd.age);
