@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Built-By: sean
 Build-Jdk: 1.6.0_24
-Class-Path: guava-15.0.jar solr-solrj-3.6.2.jar commons-httpclient-3.1
+Class-Path: guava-17.0.jar solr-solrj-3.6.2.jar commons-httpclient-3.1
  .jar commons-io-2.1.jar wstx-asl-3.2.7.jar jcl-over-slf4j-1.6.1.jar c
  ommons-lang3-3.1.jar commons-codec-1.4.jar commons-collections-3.2.1.
  jar log4j-1.2.17.jar lombok-1.14.0.jar slf4j-api-1.6.6.jar slf4j-log4

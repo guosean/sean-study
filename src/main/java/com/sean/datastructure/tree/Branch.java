@@ -30,7 +30,6 @@ public class Branch implements Trie {
 	 */
 	@Override
 	public void insertBranch(Branch branch) {
-		Preconditions.checkNotNull(branch);
 		if(null != branch){
 			if(subBranches==null){
 				subBranches = new Branch[len];

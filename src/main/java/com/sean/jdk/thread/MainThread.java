@@ -9,12 +9,19 @@ public class MainThread {
 	    p1.start();
 		Thread p2 = new Thread(new PrinterThread(3, "PrinterThread2"));
 		p2.start();*/
-		for(int i=0 ; i<1000000000; i++){
-			Thread p = new Thread();
-			p.start();
+	    new Thread() {
+			@Override
+			public void run() {
+				while(true) {
+				   System.out.println(Thread.currentThread().getName());
+				}
+			}
+		}.start();
+	
+	while(true) {
+		   System.out.println(Thread.currentThread().getName());
 		}
 	}
-
 }
 
 class PrinterThread implements Runnable{
