@@ -2,10 +2,43 @@ package com.sean.jdk.feature;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
+
+import junit.framework.Assert;
 
 import org.junit.Test;
 
+import com.google.common.base.Joiner;
+
 public class TestCommon {
+	@Test
+	public void testSplit(){
+		String[] arrays = Pattern.compile(",").split("a");
+		Assert.assertTrue(arrays.length==1);
+		System.out.println(arrays[0]);
+		arrays = Pattern.compile(",").split("a,b,");
+		Assert.assertTrue(arrays.length==2);
+	}
+	@Test
+	public void testArrayCopy(){
+		int len = 10000;
+		String[] oriArray = new String[len];
+		String[] loopArray = new String[len];
+		String[] copyArray = new String[len];
+		for(int i=0; i<len; i++){
+			oriArray[i] = String.valueOf(i);
+		}
+		long start = System.nanoTime();
+		for(int i=0; i<len; i++){
+			loopArray[i] = oriArray[i];
+		}
+		System.out.println(System.nanoTime() - start);
+		System.out.println(Joiner.on(',').join(loopArray));
+		start = System.nanoTime();
+		System.arraycopy(oriArray, 0, copyArray, 0, len);
+		System.out.println(System.nanoTime() - start);
+		System.out.println(Joiner.on(',').join(copyArray));
+	}
 	@Test
 	public void testSwitch(){
 		int i=3;
