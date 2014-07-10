@@ -10,7 +10,6 @@ import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
 import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood;
 import org.apache.mahout.cf.taste.impl.recommender.GenericItemBasedRecommender;
 import org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender;
-import org.apache.mahout.cf.taste.impl.recommender.slopeone.SlopeOneRecommender;
 import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity;
 import org.apache.mahout.cf.taste.model.DataModel;
 import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
@@ -83,10 +82,10 @@ public class TestMahout {
 			e.printStackTrace();
 		}
 	}
-
-	/**
+/*
+	*//**
 	 * 基于SlopOne的推荐实现
-	 */
+	 *//*
 	@Test
 	public void testBaseSlopOne() {
 		DataModel model;
@@ -107,5 +106,5 @@ public class TestMahout {
 			e.printStackTrace();
 		}
 
-	}
+	}*/
 }

@@ -20,7 +20,7 @@
 		<java.version>1.6</java.version>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<mahout.version>0.5</mahout.version>
+		<mahout.version>0.9</mahout.version>
 	</properties>
 	<repositories>
 		<!-- Repository where we can found the storm dependencies -->
@@ -41,11 +41,11 @@
 				<artifactId>mahout-math</artifactId>
 				<version>${mahout.version}</version>
 			</dependency>
-			<dependency>
+			<!-- <dependency>
 				<groupId>org.apache.mahout</groupId>
 				<artifactId>mahout-utils</artifactId>
 				<version>${mahout.version}</version>
-			</dependency>
+			</dependency> -->
 		</dependencies>
 
 	</dependencyManagement>
@@ -238,7 +238,7 @@
 			<groupId>org.apache.mahout</groupId>
 			<artifactId>mahout-math</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.apache.mahout</groupId>
 			<artifactId>mahout-utils</artifactId>
 			<exclusions>
@@ -247,7 +247,7 @@
 					<artifactId>slf4j-jcl</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<build>

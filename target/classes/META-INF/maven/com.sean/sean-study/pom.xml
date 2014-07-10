@@ -20,6 +20,7 @@
 		<java.version>1.6</java.version>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<mahout.version>0.9</mahout.version>
 	</properties>
 	<repositories>
 		<!-- Repository where we can found the storm dependencies -->
@@ -28,11 +29,31 @@
 			<url>http://clojars.org/repo</url>
 		</repository>
 	</repositories>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.mahout</groupId>
+				<artifactId>mahout-core</artifactId>
+				<version>${mahout.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.mahout</groupId>
+				<artifactId>mahout-math</artifactId>
+				<version>${mahout.version}</version>
+			</dependency>
+			<!-- <dependency>
+				<groupId>org.apache.mahout</groupId>
+				<artifactId>mahout-utils</artifactId>
+				<version>${mahout.version}</version>
+			</dependency> -->
+		</dependencies>
+
+	</dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>17.0</version>
+			<version>12.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -209,11 +230,29 @@
 			<artifactId>IKAnalyzer</artifactId>
 			<version>2012_u5</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.mahout</groupId>
+			<artifactId>mahout-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.mahout</groupId>
+			<artifactId>mahout-math</artifactId>
+		</dependency>
+		<!-- <dependency>
+			<groupId>org.apache.mahout</groupId>
+			<artifactId>mahout-utils</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-jcl</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency> -->
 	</dependencies>
 
 	<build>
 		<plugins>
-		<plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
