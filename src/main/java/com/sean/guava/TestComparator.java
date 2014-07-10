@@ -39,7 +39,7 @@ public class TestComparator {
 		}
 		ordering.isOrdered(fList);
 		Assert.assertEquals(String.valueOf(max), ordering.max(fList.iterator()).sorteBy);
-		System.out.println(ordering.leastOf(fList.iterator(), 5));
+//		System.out.println(ordering.leastOf(fList.iterator(), 5));
 	}
 
 }

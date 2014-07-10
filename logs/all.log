@@ -2018,3 +2018,50 @@
 [2014-07-03 21:08:42,040][ INFO][main][org.springframework.context.support.ClassPathXmlApplicationContext:510] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7a78d3: startup date [Thu Jul 03 21:08:42 CST 2014]; root of context hierarchy
 [2014-07-03 21:08:42,184][ INFO][main][org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315] - Loading XML bean definitions from class path resource [config/aop.xml]
 [2014-07-03 21:08:42,566][ INFO][main][org.springframework.beans.factory.support.DefaultListableBeanFactory:577] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1827284: defining beans [baseBusiness,baseBefore,baseAfterReturn,baseAfterThrows,baseAround,pointcut,matchBeforeAdvisor,businessProxy]; root of factory hierarchy
+[2014-07-10 10:52:05,270][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\tmp\mahout\test.txt
+[2014-07-10 10:52:05,381][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 10:52:05,386][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 10:52:05,417][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 10:58:05,150][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\tmp\mahout\test.txt
+[2014-07-10 10:58:05,184][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 10:58:05,188][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 10:58:05,251][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 11:21:56,692][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\myworkspace\sean-study\target\classes\test.txt
+[2014-07-10 11:21:56,707][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 11:21:56,713][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 11:21:56,731][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 11:30:10,496][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\myworkspace\sean-study\target\classes\test.txt
+[2014-07-10 11:30:10,508][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 11:30:10,511][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 11:30:10,526][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 11:31:47,726][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\myworkspace\sean-study\target\classes\test.txt
+[2014-07-10 11:31:47,738][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 11:31:47,741][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 11:31:47,756][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 11:31:47,822][ INFO][main][org.apache.mahout.cf.taste.impl.recommender.slopeone.MemoryDiffStorage:303] - Building average diffs...
+[2014-07-10 11:32:06,174][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\myworkspace\sean-study\target\classes\test.txt
+[2014-07-10 11:32:06,187][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 11:32:06,190][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 11:32:06,204][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 11:32:06,250][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\myworkspace\sean-study\target\classes\test.txt
+[2014-07-10 11:32:06,252][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 11:32:06,253][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 11:32:06,253][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 11:32:06,258][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\myworkspace\sean-study\target\classes\test.txt
+[2014-07-10 11:32:06,258][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 11:32:06,259][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 11:32:06,260][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 11:32:06,266][ INFO][main][org.apache.mahout.cf.taste.impl.recommender.slopeone.MemoryDiffStorage:303] - Building average diffs...
+[2014-07-10 15:09:43,634][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\myworkspace\sean-study\target\classes\test.txt
+[2014-07-10 15:09:43,800][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 15:09:43,824][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 15:09:43,902][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 15:09:44,185][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\myworkspace\sean-study\target\classes\test.txt
+[2014-07-10 15:09:44,188][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 15:09:44,191][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 15:09:44,192][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 15:09:44,204][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:165] - Creating FileDataModel for file D:\myworkspace\sean-study\target\classes\test.txt
+[2014-07-10 15:09:44,205][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:324] - Reading file info...
+[2014-07-10 15:09:44,206][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:335] - Read lines: 21
+[2014-07-10 15:09:44,207][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2014-07-10 15:09:44,237][ INFO][main][org.apache.mahout.cf.taste.impl.recommender.slopeone.MemoryDiffStorage:303] - Building average diffs...

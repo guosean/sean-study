@@ -4,10 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Data;
-import lombok.extern.log4j.Log4j;
+
+import org.junit.Test;
 
 public class Main {
+	@Test
+	public void testArg(){
+		StringBuffer a = new StringBuffer("a");
+		StringBuffer b = new StringBuffer("b");
+		processStr(a,b);
+		System.out.println(a.toString());
+        System.out.println(b.toString());
+	}
 	
+	/**
+	 * @param a
+	 * @param b
+	 */
+	private void processStr(StringBuffer a, StringBuffer b) {
+            a.append("c");
+            b = a;
+            System.out.println(a.toString());
+            System.out.println(b.toString());
+	}
+
 	public static void main(String[] args) {
 		
 		Obj[] os = new Obj[3];
