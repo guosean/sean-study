@@ -25,6 +25,7 @@ public class CookieInfoBean {
 	@Setter
 	private String cookie;
 	
+	
 	public static CookieInfoBean getInstance(final String userName,final String url,final String cookie){
 		CookieInfoBean bean = new CookieInfoBean();
 		bean.setCookie(cookie);

@@ -19,13 +19,13 @@ public class TestTrie {
 		for (int i = 0; i < 1000; i++) {
 			int content = rd.nextInt(100);
 			char[] chrs = String.valueOf(content).toCharArray();
-			log.info(String.valueOf(content));
+//			log.info(String.valueOf(content));
 			testInsert(chrs);
 		}
 		for (int i = 0; i < 1000; i++) {
 			int content = rd.nextInt(100);
 			char[] chrs = String.valueOf(content).toCharArray();
-			log.info(String.valueOf(content)+":"+testSearch(chrs));
+//			log.info(String.valueOf(content)+":"+testSearch(chrs));
 		}
 		/*for (int i = 0; i < chrs.length; i++) {
 			trie.insertBranch(new Branch(chrs[i]));

@@ -11,7 +11,6 @@ import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import org.apache.lucene.util.Version;
 import org.junit.Assert;
 import org.junit.Test;
-import org.wltea.analyzer.lucene.IKAnalyzer;
 
 /**
  * @AUTHOR: guozb
@@ -25,9 +24,9 @@ public class TestAnalyzer {
 	}
     @Test
     public void testIKAnalyzer() throws Exception{
-    	Analyzer analyzer = new IKAnalyzer();
+    	/*Analyzer analyzer = new IKAnalyzer();
 		analyze(analyzer, "梦网短信");
-		analyze(analyzer, "“和你一起回家”充值送车票活动");
+		analyze(analyzer, "“和你一起回家”充值送车票活动");*/
     }
     @Test
     public void testSimpleAnalyzer() throws Exception{

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.LineIterator;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
@@ -19,7 +17,6 @@ import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.util.Version;
 import org.junit.Test;
-import org.wltea.analyzer.lucene.IKAnalyzer;
 
 
 /**
@@ -45,8 +42,8 @@ public class TestIndexer {
 	/*	Analyzer sd = new StandardAnalyzer(Version.LUCENE_30);
 		index(sd);*/
 		//ik
-		Analyzer ik = new IKAnalyzer();
-		index(ik);
+		/*Analyzer ik = new IKAnalyzer();
+		index(ik);*/
 //		index(ik);
 //		indexAdd(ik);
 		System.out.println("索引ok");
@@ -113,7 +110,7 @@ public class TestIndexer {
 	
 	@Test
 	public void indexFile() throws IOException{
-		Analyzer analyzer = new IKAnalyzer();
+		/*Analyzer analyzer = new IKAnalyzer();
 		IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_30, analyzer );
 		Directory directory = FSDirectory.open(new File(indexPath));
 		IndexWriter writer = new IndexWriter(directory, config);
@@ -145,7 +142,7 @@ public class TestIndexer {
 			 writer.addDocument(doc);
 		}		
 		 writer.optimize();
-		 writer.close();
+		 writer.close();*/
 	}
 	public Map<String,Integer> transToMap(final String[] ruleScore){
 		Map<String, Integer> rl = new HashMap<String, Integer>();

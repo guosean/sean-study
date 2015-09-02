@@ -10,10 +10,8 @@ import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermFreqVector;
-import org.apache.lucene.queryParser.MultiFieldQueryParser;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
-import org.apache.lucene.search.Explanation;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.Query;
@@ -28,7 +26,6 @@ import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 import org.junit.Before;
 import org.junit.Test;
-import org.wltea.analyzer.lucene.IKAnalyzer;
 
 /**
  * <p>
@@ -135,8 +132,8 @@ public class TestSearcher {
 	
 	@Test
 	public void testMultiQueryParser() throws ParseException, CorruptIndexException, IOException{
-		String[] fields = {"product","rule0","rule1","rule2","rule3","rule4","rule5"};
-		QueryParser qp = new MultiFieldQueryParser(Version.LUCENE_30,fields , new IKAnalyzer()/*new StandardAnalyzer(Version.LUCENE_30)*/);
+		/*String[] fields = {"product","rule0","rule1","rule2","rule3","rule4","rule5"};
+		QueryParser qp = new MultiFieldQueryParser(Version.LUCENE_30,fields , new IKAnalyzer()new StandardAnalyzer(Version.LUCENE_30));
 		Query query = qp.parse("+专享 +188");
 		long start = System.nanoTime();
 		TopDocs tps = searcher.search(query, 10);
@@ -151,7 +148,7 @@ public class TestSearcher {
 			// 返回匹配文件名
 			System.out.println(doc.get("product") + " ----- " + doc.get("rule0")+"---"+doc.get("rule1"));
 		}
-		searcher.close();
+		searcher.close();*/
 	}
 
 }

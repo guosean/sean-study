@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * @AUTHOR: guozb
  * @DATE: 2014-7-1
  */
-@Target(ElementType.METHOD)
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 public @interface MyAnn {
