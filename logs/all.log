@@ -3167,3 +3167,11 @@ c.DemoService?anyhost=true&application=sean_provider&channel.readonly.sent=true&
 [2015-09-02 17:15:15,725][ INFO][DubboSharedHandler-thread-1][com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol:130] -  [DUBBO] disconected from /10.86.106.131:20880,url:dubbo://10.86.106.131:20880/com.sean.rpc.DemoService?anyhost=true&application=sean_consumer&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.sean.rpc.DemoService&methods=sayHello&pid=11276&side=consumer&timestamp=1441185314748, dubbo version: 2.5.3, current host: 10.86.106.131
 [2015-09-02 17:15:15,725][ INFO][DubboShutdownHook][com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol:421] -  [DUBBO] Close dubbo connect: 10.86.106.131:0-->10.86.106.131:20880, dubbo version: 2.5.3, current host: 10.86.106.131
 [2015-09-02 17:15:15,725][ INFO][DubboShutdownHook][com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol:63] -  [DUBBO] Destroy reference: dubbo://10.86.106.131:20880/com.sean.rpc.DemoService?anyhost=true&application=sean_consumer&check=false&dubbo=2.5.3&interface=com.sean.rpc.DemoService&methods=sayHello&pid=11276&side=consumer&timestamp=1441185314748, dubbo version: 2.5.3, current host: 10.86.106.131
+[2016-04-27 22:45:44,044][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:187] - Creating FileDataModel for file /Users/guozhenbin/JavaWorkspace/sean-study/target/classes/test.txt
+[2016-04-27 22:45:44,115][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:358] - Reading file info...
+[2016-04-27 22:45:44,122][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:369] - Read lines: 21
+[2016-04-27 22:45:44,142][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
+[2016-04-27 22:45:44,156][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:187] - Creating FileDataModel for file /Users/guozhenbin/JavaWorkspace/sean-study/target/classes/test.txt
+[2016-04-27 22:45:44,156][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:358] - Reading file info...
+[2016-04-27 22:45:44,157][ INFO][main][org.apache.mahout.cf.taste.impl.model.file.FileDataModel:369] - Read lines: 21
+[2016-04-27 22:45:44,158][ INFO][main][org.apache.mahout.cf.taste.impl.model.GenericDataModel:113] - Processed 5 users
